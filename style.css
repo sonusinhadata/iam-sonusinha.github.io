@@ -63,7 +63,9 @@ nav { position: sticky; top: 0; z-index: 40; background: color-mix(in srgb, var(
 nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 66px; gap: 12px; }
 .brand { font-weight: 800; font-size: 17px; color: var(--txt); white-space: nowrap; display: flex; align-items: center; gap: 10px; }
 .brand:hover { text-decoration: none; }
-.brand i { width: 32px; height: 32px; border-radius: 10px; display: grid; place-items: center; font-style: normal; font-size: 13px; font-weight: 800; color: #04111d; background: linear-gradient(135deg, var(--acc), var(--acc3)); }
+.brand img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; display: block; padding: 3px; border: 2px solid transparent;
+  background: linear-gradient(var(--panel), var(--panel)) padding-box, linear-gradient(135deg, var(--acc), var(--acc3)) border-box; transition: transform .25s; }
+.brand:hover img { transform: scale(1.08) rotate(-4deg); }
 .right { display: flex; align-items: center; gap: 10px; }
 .links { display: flex; align-items: center; gap: 2px; }
 .links a { color: var(--muted); font-size: 14px; padding: 8px 13px; border-radius: 9px; transition: color .2s, background .2s; }
@@ -275,7 +277,7 @@ footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted)
   .metrics { grid-template-columns: repeat(2, 1fr); }
   .burger { display: grid; }
   .links { position: absolute; left: 0; right: 0; top: 66px; flex-direction: column; align-items: stretch; gap: 0; padding: 10px var(--gutter) 16px;
-    background: color-mix(in srgb, var(--bg) 96%, transparent); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line);
+    background: var(--bg); box-shadow: 0 24px 40px rgba(0, 0, 0, .35); border-bottom: 1px solid var(--line);
     transform: translateY(-12px); opacity: 0; pointer-events: none; transition: .25s; }
   .links.open { transform: none; opacity: 1; pointer-events: auto; }
   .links a { padding: 13px 10px; font-size: 16px; border-bottom: 1px solid var(--line); border-radius: 0; }
